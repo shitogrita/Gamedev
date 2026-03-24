@@ -1,0 +1,38 @@
+# Doxyfile_snake — документация только по змейке
+
+PROJECT_NAME           = "BrickGame Snake"
+PROJECT_BRIEF          = "Snake game logic and Qt desktop UI"
+OUTPUT_DIRECTORY       = docs/snake
+
+# Какие файлы документируем
+INPUT                  = \
+  brick_game/snake/apple.h \
+  brick_game/snake/apple.cpp \
+  brick_game/snake/snake.h \
+  brick_game/snake/snake.cpp \
+  brick_game/snake/gameManager.h \
+  gui/desktop/game_widget.h \
+  gui/desktop/game_widget.cpp
+
+FILE_PATTERNS          = *.h *.hpp *.c *.cpp
+RECURSIVE              = NO
+
+# Чтобы дока генерилась даже без doxygen-комментов
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+# Форматы вывода
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+
+GENERATE_LATEX         = YES
+LATEX_OUTPUT           = latex
+
+# Чуть более дружелюбные названия
+FULL_PATH_NAMES        = YES
+STRIP_FROM_PATH        = .
+
+# Чтоб не шумело лишним
+WARN_IF_UNDOCUMENTED   = NO
+QUIET                  = YES
